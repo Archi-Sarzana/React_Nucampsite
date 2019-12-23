@@ -159,7 +159,7 @@ export const fetchPartners = () => dispatch => {
         }
     )
     .then(response => response.json())
-    .then(campsites => dispatch(addPartners(campsites)))
+    .then(partners => dispatch(addPartners(partners)))
     .catch(error => dispatch(partnersFailed(error.message)));
 };
 

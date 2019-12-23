@@ -4,6 +4,8 @@ import { Loading } from './LoadingComponent';
 import { FadeTransform } from 'react-animation-components';
 import { baseUrl } from '../Shared/baseUrl';
 
+//Remember to do Task 1: Import the baseUrl constant and update the CardImg src in the RenderCard component appropriately
+
 function RenderCard({item, isLoading, errMess}) {
     if (isLoading) {
         return <Loading />
@@ -47,7 +49,9 @@ function Home(props) {
                     />
                 </div>
                 <div className="col-md m-1">
-                    <RenderCard item={props.partner} />
+                    <RenderCard item={props.partner} 
+                    isLoading={props.partnerLoading}
+                    errMess={props.partnerErrMess}/>
                 </div>
             </div>
         </div>
